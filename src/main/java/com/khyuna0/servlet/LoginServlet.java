@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet("/LoginOk")
+//@WebServlet("/LoginOk")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//System.out.println("로그인 호출");
+		System.out.println(".do 호출");
 		String mid = request.getParameter("mid");
 		String mpw = request.getParameter("mpw");
 		//System.out.println("login.jsp에서 넘겨받은 아이디 값 : " + mid);
@@ -53,7 +53,7 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		doGet(request, response); 
 	}
 
 }
