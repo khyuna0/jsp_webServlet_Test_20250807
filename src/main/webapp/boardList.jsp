@@ -29,6 +29,13 @@
 </style>
 </head>
 <body>
+
+	<%	// 로그인 하지 않은 유저 보내기
+		if(session.getAttribute("sid") == null) {
+			response.sendRedirect("login.do");
+		};
+	%>
+
 	<!-- 게시판 글 리스트 -->
 	
 	<h2>자유 게시판 목록</h2>

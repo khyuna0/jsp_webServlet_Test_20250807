@@ -25,6 +25,13 @@
 </style>
 </head>
 <body>
+
+	<%	// 로그인 하지 않은 유저 보내기
+		if(session.getAttribute("sid") == null) {
+			response.sendRedirect("login.do");
+		};
+	%>
+	
 	<h2>회원 목록</h2>
 		<hr>
 		<table>
