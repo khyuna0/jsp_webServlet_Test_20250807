@@ -46,5 +46,11 @@
 				</tr>
 			</c:forEach>
 		</table>
+		
+		<a href="welcome.do">환영 페이지로 다시 가기</a> <br><br>
+		<!-- 뒤로 가기 -->
+		<a href="javascript:history.go(-1);">뒤로 가기</a> <br><br>
+		<!-- 뒤로 가기 버튼-->
+		<input type="button" value="뒤로가기" onclick ="javascript:history.go(-1)">
 </body>
 </html>

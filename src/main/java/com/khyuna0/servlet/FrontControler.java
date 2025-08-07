@@ -80,6 +80,8 @@ public class FrontControler extends HttpServlet {
 		} else if (command.equals("/login.do")) {
 			viewPage = "login.jsp";
 		} else if (command.equals("/welcome.do")) {
+			session = request.getSession();
+			request.setAttribute("mid", (String)session.getAttribute("sid"));
 			viewPage = "welcome.jsp";
 		} else if (command.equals("/logout.do")) {
 			session = request.getSession();
@@ -103,7 +105,7 @@ public class FrontControler extends HttpServlet {
 			List<MemberDto> memberList = new ArrayList<MemberDto>();
 			
 			memberList.add(new MemberDto("tiger","홍길동",17,"2025-03-01"));
-			memberList.add(new MemberDto("liom","김유신",19,"2025-04-09"));
+			memberList.add(new MemberDto("lion","김유신",19,"2025-04-09"));
 			memberList.add(new MemberDto("blackcat","강감찬",20,"2025-04-11"));
 			memberList.add(new MemberDto("whitedog","이순신",27,"2025-05-05"));
 			memberList.add(new MemberDto("redtiger","이몽룡",31,"2025-06-20"));
